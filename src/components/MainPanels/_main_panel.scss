@@ -1,0 +1,75 @@
+.main-panel {
+    width: 80%;
+    height: 100%;
+    overflow: auto;
+
+    @include lg-size {
+        width: 70%;
+    }
+
+    @include sm-size {
+        width: 100%;
+    }
+
+
+}
+
+.all-notes {
+    .header {
+        position: relative;
+        margin-bottom: 5rem;
+
+        p {
+            font-size: 1.3rem;
+        }
+
+        .add-note {
+            position: absolute;
+            top: 10px;
+            right: 5px;
+
+            &:focus {
+                outline: none;
+                box-shadow: none
+            }
+
+            img {
+                width: 60px;
+            }
+        }
+    }
+}
+
+.note-card {
+    padding: 35px 25px;
+    color: #fff;
+    background-color: #383838;
+    border: 1px solid #000;
+    border-radius: 10px;
+
+    h3 {
+        text-transform: capitalize;
+        margin-bottom: 1.4rem;
+    }
+
+    .card-description-container {
+        position: relative;
+        height: 140px;
+        overflow: hidden;
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 50px;
+            width: 100%;
+            background: linear-gradient(rgba(255, 255, 255, 0.0), #383838);
+        }
+
+        p {
+            text-align: justify;
+            font-size: 0.8rem;
+        }
+    }
+}

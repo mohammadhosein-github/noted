@@ -1,0 +1,72 @@
+.side-panel {
+    position: relative;
+    height: 100%;
+    width: 20%;
+    padding-left: 2.5vw;
+
+    @include lg-size {
+        width: 30%;
+        // padding-left: 40px;
+    }
+
+    @include sm-size {
+        padding-left: 4vw;
+        height: auto;
+        width: 100%;
+        // padding-left: 50px;
+    }
+
+
+
+    .brand-logo {
+        margin-bottom: 40px;
+
+        @include sm-size {
+            margin-left: 10px;
+        }
+    }
+
+    .navigation-items {
+        padding-right: 50px;
+        margin-bottom: 150px;
+
+        @include md-size {
+            padding-right: 30px;
+        }
+
+        .each-item {
+            position: relative;
+            padding-left: 55px;
+            height: 40px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+
+
+
+            &:hover {
+                background-color: #ececec;
+                text-decoration: none;
+            }
+
+            img {
+                position: absolute;
+                top: 8px;
+                left: 10px;
+                height: 25px;
+            }
+
+            p {
+                text-transform: capitalize;
+                line-height: 40px;
+                font-size: 1.2rem;
+                color: #707070;
+            }
+        }
+    }
+
+    .navigation-footer {
+        position: absolute;
+        bottom: 20px;
+        left: 40px;
+    }
+}
